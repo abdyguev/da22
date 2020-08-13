@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Landing from './components/Landing'
+import { Switch, Route } from 'react-router-dom'
+import About from "./components/About"
+import Contact from "./components/Contact"
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+
+      <Route exact path="/" component={Landing} />
+        <Route component={About} path="/about" />
+        <Route component={Contact} path="/contact" />
+        <Route path='/instagram' component={() => {
+          window.location.href = 'https://www.instagram.com/deadattwentytwo/';
+          return null;
+        }} />
+        <Route path='/spotify' component={() => {
+          window.location.href = 'https://www.spotify.com/';
+          return null;
+        }} />
+        <Route path='/youtube' component={() => {
+          window.location.href = 'https://www.youtube.com/';
+          return null;
+        }} />
+      </Switch>
+    </>
   );
 }
 
