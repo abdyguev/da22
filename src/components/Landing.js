@@ -44,9 +44,9 @@ export default function Landing() {
 
             </div>
             <div class="overlay">
-                
+                <img height="300px" src="./images/logo.png" alt="logo" ></img>
 
-                <Link to="/instagram" target="_blank"><img height="300px" src="./images/logo.png" alt="logo" ></img></Link>
+
 
             </div>
             <div class="overlay" style={{ paddingTop: "150px" }}>
